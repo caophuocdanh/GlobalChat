@@ -1,0 +1,18 @@
+{
+  "name": "global-chat",
+  "version": "1.0.0",
+  "description": "Ứng dụng Chat đơn giản thời gian thực với giao diện Trắng - Đen và font Courier New",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chat",
+    "realtime",
+    "websocket",
+    "minimalist",
+    "black-and-white"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

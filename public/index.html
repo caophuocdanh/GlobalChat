@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-content">
+  <title>GLOBAL CHAT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- MÀN HÌNH 1: NHẬP TÊN (START CHAT) -->
+  <main id="screen-login" class="screen-view active">
+    <div class="terminal-card">
+      <header class="card-header">
+        <h1 class="logo-title">=== GLOBAL CHAT ===</h1>
+        <p class="card-description">Ứng dụng chat công khai siêu tốc</p>
+      </header>
+
+      <form id="form-login" class="login-form" autocomplete="off" onsubmit="return false;">
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="input-username" 
+            maxlength="20" 
+            placeholder="Nhập tên của bạn..." 
+            autofocus 
+            required 
+            spellcheck="false"
+          >
+        </div>
+
+        <button type="submit" id="btn-start" class="btn-primary">
+          [ START CHAT ]
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- MÀN HÌNH 2: GIAO DIỆN CHAT CHÍNH (TỐI ƯU MOBILE & DESKTOP) -->
+  <main id="screen-chat" class="screen-view">
+    <header class="chat-header">
+      <div class="header-left">
+        <span class="chat-title">GLOBAL CHAT</span>
+        <span class="chat-user-badge" title="Tên của bạn">
+          <strong id="current-user-name">...</strong>
+        </span>
+      </div>
+      <div class="header-right">
+        <span class="online-indicator" title="Số người đang online">
+          <span class="dot"></span>
+          <span id="online-count">1</span>
+          <span class="online-text"> ONLINE</span>
+        </span>
+        <button id="btn-leave" class="btn-secondary" title="Đổi tên hoặc rời phòng">
+          <span class="btn-text-desktop">[ ĐỔI TÊN ]</span>
+          <span class="btn-text-mobile">ĐỔI</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- KHUNG CHAT LỚN HIỂN THỊ NỘI DUNG -->
+    <section id="chat-messages-container" class="chat-messages-area">
+      <div id="chat-messages" class="messages-list">
+        <!-- Tin nhắn sẽ được render tại đây -->
+      </div>
+      <button id="btn-scroll-bottom" class="btn-scroll-down hidden" title="Cuộn xuống tin mới nhất">
+        ↓ Mới
+      </button>
+    </section>
+
+    <!-- THANH NHẬP NỘI DUNG CHAT -->
+    <footer class="chat-input-bar">
+      <form id="form-chat" class="chat-form" autocomplete="off" onsubmit="return false;">
+        <input 
+          type="text" 
+          id="input-chat-message" 
+          placeholder="Nhập tin nhắn..." 
+          maxlength="1000" 
+          spellcheck="false"
+        >
+        <button type="submit" id="btn-send-message" class="btn-send">
+          GỬI
+        </button>
+      </form>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
